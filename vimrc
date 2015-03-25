@@ -4,6 +4,8 @@
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set mouse=a
+
 "
 " Environment
 "
@@ -76,10 +78,10 @@ augroup END
 set autoindent               " auto indentation
 set copyindent               " copy the previous indentation on autoindenting
 set smarttab                 " insert tabs on line start according to context
-set expandtab                " replace <TAB> with spaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+"set expandtab                " replace <TAB> with spaces
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 autocmd FileType Makefile set noexpandtab
 autocmd FileType jade set tabstop=2|set softtabstop=2|set shiftwidth=2
 
@@ -156,14 +158,14 @@ endfun
 " Shortcuts
 "
 " disable arrow keys and force hjkl
-noremap  <Up> ""
-noremap! <Up> <Esc>
-noremap  <Down> ""
-noremap! <Down> <Esc>
-noremap  <Left> ""
-noremap! <Left> <Esc>
-noremap  <Right> ""
-noremap! <Right> <Esc>
+"noremap  <Up> ""
+"noremap! <Up> <Esc>
+"noremap  <Down> ""
+"noremap! <Down> <Esc>
+"noremap  <Left> ""
+"noremap! <Left> <Esc>
+"noremap  <Right> ""
+"noremap! <Right> <Esc>
 
 " set leader to ,
 let mapleader=","
@@ -259,7 +261,7 @@ let g:ctrlp_working_path_mode = 'c'
 
 " NERDTree
 " open a NERDTree automatically when vim starts up if no files were specified
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
