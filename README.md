@@ -34,18 +34,13 @@ Starting in Ubuntu 10.04 there is a [bug](https://bugs.launchpad.net/ubuntu/+sou
 which prevents filetypes from being detected correctly.  In order to workaround
 the problem, simply comment out the `syntax on` line in `/etc/vim/vimrc`.
 
+#### vim-autoformat ####
 
-#### jsruntime.vim ####
+Install the following external formatting programs to enable vim-autoformat:
 
-A Javascript interpreter must be installed.
-
-For Ubuntu 32-bit, just use the built-in PyV8:
-
-    sudo ln -s ~/.vim/bundle/jsruntime/plugin/jsruntime/PyV8/libboost_python.so.1.50.0 /usr/lib
-
-For Ubuntu 64-bit, install node.js:
-
-    sudo apt-get install nodejs
+    npm install -g js-beautify
+    brew install astyle
+    brew install tidy-html5
 
 
 UPDATES
@@ -62,13 +57,12 @@ PRE-INSTALLED PLUGINS
 ---------------------
 
 * [vim-colorschemes][]: a collection of colorschemes for vim
-* [jsruntime.vim][]: runs javascript code directly in vim
-* [sourcebeautify][]: beautifies source code written in html, css, js, and json
+* [vim-go][]: a suite of tools for golang
+* [vim-autoformat][]: code formatting
 * [vim-javascript][]: syntax highlighting and indenting for javascript
 * [vim-json][]: keyword highlighting and various customizations for json
 * [vim-node][]: tools and environment for developing with node.js in vim
 * [vim-jade][]: syntax highlighting for jade templates
-* [vim-golang][]: syntax highlighting, indentation, and many vim plugins for golang
 * [vim-nodejs-complete][]: omni completion for node.js
 * [pythoncomplete][]: omni completion for python
 * [javacomplete][]: omni completion for java
@@ -113,12 +107,11 @@ My vimrc settings are based extensively on the following:
 + [Paul Rouget's vimrc](http://paulrouget.com/e/myconf/)
 
 [vim-colorschemes]: https://github.com/flazz/vim-colorschemes
-[jsruntime.vim]: https://github.com/michalliu/jsruntime.vim
 [vim-json]: https://github.com/elzr/vim-json
 [vim-node]: https://github.com/moll/vim-node
 [vim-jade]: https://github.com/digitaltoad/vim-jade
-[vim-golang]: https://github.com/jnwhiteh/vim-golang
-[sourcebeautify]: https://github.com/vim-scripts/sourcebeautify.vim
+[vim-go]: https://github.com/fatih/vim-go.git
+[vim-autoformat]: https://github.com/Chiel92/vim-autoformat.git
 [vim-javascript]: https://github.com/pangloss/vim-javascript
 [vim-nodejs-complete]: https://github.com/myhere/vim-nodejs-complete
 [pythoncomplete]: https://github.com/vim-scripts/pythoncomplete
