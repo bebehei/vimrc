@@ -125,7 +125,7 @@ if !isdirectory($HOME . "/.cache/vim")
     call mkdir($HOME . "/.cache/vim", "p")
 "	:silent !install -dm700 ~/.cache/vim >/dev/null 2>&1
 endif
-set directory=~/.cache/vim
+set directory=~/.cache/vim//
 
 
 "
