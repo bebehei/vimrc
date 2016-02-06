@@ -11,7 +11,7 @@ set mouse=a
 "
 " pathogen (must be placed in the beginning of this file)
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
 "
