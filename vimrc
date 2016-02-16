@@ -12,6 +12,7 @@ set mouse=a
 " pathogen (must be placed in the beginning of this file)
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect('bundle/{}')
+call pathogen#infect('bundle-external/{}')
 call pathogen#helptags()
 
 "
