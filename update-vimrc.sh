@@ -12,6 +12,7 @@ die() {
 
 cd "$VIMHOME"
 git pull
-git submodule update --init
+git submodule sync
+git submodule update --init --recursive
 
 echo "vimrc is updated successfully."

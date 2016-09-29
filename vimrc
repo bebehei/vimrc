@@ -89,7 +89,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 autocmd FileType Makefile set noexpandtab
-autocmd FileType jade set tabstop=2|set softtabstop=2|set shiftwidth=2
+autocmd FileType javascript,jade set tabstop=2|set softtabstop=2|set shiftwidth=2
 
 
 "
@@ -263,14 +263,16 @@ au! BufRead,BufNewFile *.json set filetype=json
 
 " vim-javascript
 let javascript_fold=1
+au! BufRead,BufNewFile *.es6 set filetype=javascript
 
-" SuperTab-continued https://github.com/vim-scripts/SuperTab-continued.
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+" vim-jsx enable jsx syntax highlighting in .js files too
+let g:jsx_ext_required = 0
 
 " SnipMate
 let g:snipMateAllowMatchingDot = 0
+
+" xmledit - enable auto-close tags for html files
+let g:xmledit_enable_html=1
 
 " ctrlp.vim
 let g:ctrlp_max_files = 500
@@ -290,6 +292,11 @@ nnoremap <leader>f :NERDTreeFind<CR>
 " let g:EasyMotion_leader_key = '<Leader>'
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
+
+" YouCompleteMe
+" disable use of tab
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 
 " vim-go
 au FileType go nmap <leader>r <Plug>(go-run)
@@ -312,3 +319,26 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
+let g:go_list_type = "quickfix"
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = { 'mode': 'passive' }
+"let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['gometalinter']
+let g:syntastic_go_gometalinter_args =
+    \ "--disable-all --enable=vet --enable=golint --enable=errcheck --deadline=5s " .
+    \ "--include='^" . expand('%:p') . ".*$'"
+noremap  <C-w>r :SyntasticReset<CR>
+noremap! <C-w>r <Esc>:SyntasticReset<CR>
+noremap  <C-w>t :SyntasticToggle<CR>
+noremap! <C-w>t <Esc>:SyntasticToggle<CR>
+noremap  <C-w>c :SyntasticCheck<CR>
+noremap! <C-w>c <Esc>:SyntasticCheck<CR>

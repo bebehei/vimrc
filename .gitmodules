@@ -7,9 +7,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/supertab-continued"]
-	path = bundle/supertab-continued
-	url = https://github.com/vim-scripts/SuperTab-continued..git
 [submodule "bundle/javacomplete"]
 	path = bundle/javacomplete
 	url = https://github.com/vim-scripts/javacomplete.git
@@ -24,7 +21,7 @@
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
+	url = https://github.com/easymotion/vim-easymotion.git
 [submodule "bundle/indent-motion"]
 	path = bundle/indent-motion
 	url = https://github.com/vim-scripts/indent-motion.git
@@ -55,9 +52,6 @@
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
-[submodule "bundle/delimitMate"]
-	path = bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate
@@ -103,6 +97,24 @@
 [submodule "bundle/vim-tmux-navigator"]
 	path = bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "bundle/auto-pairs"]
+	path = bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-react-snippets"]
+	path = bundle/vim-react-snippets
+	url = https://github.com/justinj/vim-react-snippets.git
+[submodule "bundle/vim-jsx"]
+	path = bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/editorconfig-vim"]
+	path = bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
