@@ -27,6 +27,8 @@ if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
 
+set tabpagemax=100
+
 "
 " User Interface
 "
